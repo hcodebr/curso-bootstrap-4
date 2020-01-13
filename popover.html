@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Hcode</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <button 
+            type="button" 
+            class="btn btn-lg btn-primary" 
+            data-toggle="popover" 
+            title="Popover Título"
+            data-content="Conteúdo do popover de exemplo!">Clique para ver o popover</button>
+
+        <hr>
+
+        <button 
+            type="button" 
+            class="btn btn-secondary" 
+            data-toggle="popover" 
+            data-placement="top"
+            data-content="Conteúdo do popover de exemplo!">
+            Top
+        </button>
+        
+        <button 
+            type="button" 
+            class="btn btn-secondary" 
+            data-toggle="popover" 
+            data-placement="right"
+            data-content="Conteúdo do popover de exemplo!">
+            Right
+        </button>
+        
+        <button 
+            type="button" 
+            class="btn btn-secondary" 
+            data-toggle="popover" 
+            data-placement="bottom"
+            data-content="Conteúdo do popover de exemplo!">
+            Bottom
+        </button>
+        
+        <button 
+            type="button" 
+            class="btn btn-secondary" 
+            data-toggle="popover" 
+            data-placement="left"
+            data-content="Conteúdo do popover de exemplo!">
+            Left
+        </button>
+
+        <hr>
+
+        <a 
+            tabindex="0"
+            class="btn btn-success"
+            role="button" 
+            data-toggle="popover" 
+            data-trigger="focus"
+            title="Popover Título"
+            data-content="Conteúdo do popover de exemplo!">Fechar no próximo clique</a>
+
+        <hr>
+
+        <button type="button" id="btn-show" class="btn btn-warning">Ver popovers</button>
+
+    </div>    
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(function () {
+
+        $('[data-toggle="popover"]').popover();
+
+        $('#btn-show').on('click', event => {
+
+            $('a[data-toggle="popover"]').popover('toggle');
+
+        });
+
+        $('[data-toggle="popover"]')
+            .on('show.bs.popover', event => console.log('show.bs.popover', event.target))
+            .on('shown.bs.popover', event => console.log('shown.bs.popover', event.target))
+            .on('hide.bs.popover', event => console.log('hide.bs.popover', event.target))
+            .on('hidden.bs.popover', event => console.log('hidden.bs.popover', event.target))
+            .on('inserted.bs.popover', event => console.log('inserted.bs.popover', event.target));
+
+    })
+    </script>
+
+</body>
+</html>

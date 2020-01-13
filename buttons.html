@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Hcode</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <hr>
+        
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary">Clique aqui</button>
+                <button class="btn btn-secondary">Clique aqui</button>
+                <button class="btn btn-success">Clique aqui</button>
+                <button class="btn btn-danger">Clique aqui</button>
+                <button class="btn btn-warning">Clique aqui</button>
+                <button class="btn btn-info">Clique aqui</button>
+                <button class="btn btn-dark">Clique aqui</button>
+                <button class="btn btn-light">Clique aqui</button>
+                <button class="btn btn-link">Clique aqui</button>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="row">
+            <div class="col">
+                <a class="btn btn-primary" href="#">Salvar</a>
+                <button class="btn btn-primary">Salvar</button>
+                <input type="button" class="btn btn-primary" value="Salvar">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                
+                <button class="btn btn-outline-primary">Clique aqui</button>
+                <button class="btn btn-outline-secondary">Clique aqui</button>
+                <button class="btn btn-outline-success">Clique aqui</button>
+                <button class="btn btn-outline-danger">Clique aqui</button>
+                <button class="btn btn-outline-warning">Clique aqui</button>
+                <button class="btn btn-outline-info">Clique aqui</button>
+                <button class="btn btn-outline-dark">Clique aqui</button>
+                <button class="btn btn-outline-light">Clique aqui</button>
+                <button class="btn btn-outline-link">Clique aqui</button>
+
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-lg">Clique aqui</button>
+                <button class="btn btn-primary">Clique aqui</button>
+                <button class="btn btn-primary btn-sm">Clique aqui</button>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-block">Clique aqui</button>
+            </div>
+        </div>
+
+        <hr>
+        
+        <div class="row">
+            <div class="col">
+                <a class="btn btn-primary btn-block active" href="#" role="button" aria-pressed="true">Clique aqui</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-block" disabled>Clique aqui</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success" id="btn-auto-save" data-toggle="button" aria-pressed="false" autocomplete="off">Auto Save</button>
+                <button class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Auto Delete</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
+                    </label>
+                    <label class="btn btn-secondary" id="btn-option2">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> 2
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> 3
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <button class="btn btn-primary" id="btn-click">Ativa/Desativa Auto Save</button>
+        <button class="btn btn-primary" id="btn-click-2">Ativa Opção 2</button>
+
+    </div>    
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    $(function(){
+
+        $('#btn-click').on('click', event => {
+
+            $('#btn-auto-save').button('toggle');
+
+        });
+
+        $('#btn-click-2').on('click', event => {
+
+            $('#btn-option2').button('toggle');
+
+        });
+
+    });
+    </script>
+
+</body>
+</html>

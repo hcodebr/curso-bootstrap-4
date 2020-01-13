@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Hcode</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Hcode Treinamentos <span class="badge badge-primary">Novo</span></h1>
+        <h2>Hcode Treinamentos <span class="badge badge-primary">Novo</span></h2>
+        <h3>Hcode Treinamentos <span class="badge badge-primary">Novo</span></h3>
+        <h4>Hcode Treinamentos <span class="badge badge-primary">Novo</span></h4>
+        <h5>Hcode Treinamentos <span class="badge badge-primary">Novo</span></h5>
+        <h6>Hcode Treinamentos <span class="badge badge-primary">Novo</span></h6>
+
+        <hr>
+
+        <button type="button" id="btn-click" class="btn btn-primary">Clique <span class="badge badge-light">0</span></button>
+
+        <hr>
+
+        <button type="button" class="btn btn-primary">
+            Caixa de Entrada <span class="badge badge-light">4</span>
+            <span class="sr-only">Há 4 mensagens não lidas</span>
+        </button>
+
+        <hr>
+
+        <span class="badge badge-primary">1</span>
+        <span class="badge badge-secondary">2</span>
+        <span class="badge badge-success">3</span>
+        <span class="badge badge-danger">4</span>
+        <span class="badge badge-warning">5</span>
+        <span class="badge badge-info">6</span>
+        <span class="badge badge-light">7</span>
+        <span class="badge badge-dark">8</span>
+
+        <hr>
+
+        <span class="badge badge-primary">1</span>
+        <span class="badge badge-pill badge-primary">1</span>
+
+        <hr>
+
+        <a href="#" class="badge badge-success">Verde</a>
+
+    </div>    
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    $(function(){
+
+        $('#btn-click').on('click', event => $('#btn-click span').text(parseInt($('#btn-click span').text(), 10) + 1));
+
+    });
+    </script>
+
+</body>
+</html>

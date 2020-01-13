@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Hcode</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <form class="needs-validation" novalidate>
+
+            <div class="form-row">
+                <div class="col form-group">
+                    <label for="first">Primeiro nome</label>
+                    <input type="text" class="form-control is-valid" id="first" required>
+                    <small class="text-muted">Digite sem abreviações.</small>
+                    <div class="valid-feedback"> Muito bem!</div>
+                </div>
+                <div class="col form-group">
+                    <label for="last">Último nome</label>
+                    <input type="text" class="form-control is-invalid" id="last" required>
+                    <small class="text-muted">Digite sem abreviações.</small>
+                    <div class="valid-feedback">Muito bem!</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control is-invalid" id="email" required>
+                    <div class="invalid-feedback">Preencha um endereço de e-mail válido.</div>
+                </div>
+                <div class="col form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-row">
+                <div class="col-sm-3 form-group">
+                    <label for="zipcode">CEP</label>
+                    <input type="text" class="form-control" id="zipcode">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-sm-9 form-group">
+                    <label for="street">Endereço</label>
+                    <input type="text" class="form-control" placeholder="Rua, Av..." id="street">
+                </div>
+                <div class="col-sm-3 form-group">
+                    <label for="street-number">Número</label>
+                    <input type="text" class="form-control" id="street-number">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-sm-6 form-group">
+                    <label for="complement">Complemento</label>
+                    <input type="text" class="form-control" id="complement">
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="district">Bairro</label>
+                    <input type="text" class="form-control" id="district">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-sm-4 form-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+                <div class="col-6 col-sm-4 form-group">
+                    <label for="state">Estado</label>
+                    <input type="text" class="form-control" id="state">
+                </div>
+                <div class="col-6 col-sm-4 form-group">
+                    <label for="country">País</label>
+                    <input type="text" class="form-control" id="country">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button class="btn btn-primary btn-block">Salvar</button>
+            </div>
+
+        </form>
+        
+    </div>
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    //Com jQuery
+    $(() => {
+
+        $('form').on('submit', event => {
+
+            const form = event.target;
+
+            if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            $(form).addClass('was-validated');
+
+        });
+
+    });
+    //Sem jQuery
+    window.addEventListener("load", () => {
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', event => {
+
+            if (form.checkValidity() === false) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+            }
+
+            form.classList.add('was-validated');
+
+        });
+
+    });
+    </script>
+
+</body>
+</html>

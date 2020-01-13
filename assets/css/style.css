@@ -1,0 +1,11 @@
+.container {
+    padding: 2rem;
+}
+.row>.col, 
+.row>[class^=col-],
+.bg {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(243, 117, 32, .15);
+    border: 1px solid rgba(243, 117, 32, .2);
+}
